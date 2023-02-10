@@ -47,7 +47,7 @@ function upload (){
 </script>
 
 <template>
-    <div class="container" style="width: 57%;">
+    <div class="container" style="width: 57%; padding: 17px;">
         <form class="row g-3" @submit.prevent="submit()">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">First Name</label>

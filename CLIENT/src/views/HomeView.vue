@@ -1,6 +1,4 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+
 
 <template>
    <div class="container col-xxl-8 px-4 py-5">

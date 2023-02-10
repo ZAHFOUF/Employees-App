@@ -155,3 +155,11 @@ p {
     justify-content: center;
     padding: 30px;
 }
+
+html{
+  background-color: #FFFFFF;
+}
+
+header,footer{
+   background-color: #FFFFFF;
+}
