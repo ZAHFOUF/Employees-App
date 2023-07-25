@@ -13,7 +13,7 @@ class UserController extends Controller
 
         $user = ['name'=>'YOUNES' , 'lastname'=>'ZAHFOUF' , 'email'=>'youneszahfouf@gmail.com' , 'job' => 'Full Stack'];
 
-    return response()->json($user)->header('Access-Control-Allow-Origin', '*');
+    return response()->view("welcome",[ 'data' => $user]);
     }
 
 }

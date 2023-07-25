@@ -1,0 +1,20 @@
+$unread : #c1cbff ;
+
+.unread {
+    animation-name: colorSwitch;
+    animation-duration: 1.5s; /* Adjust the duration as desired */
+    animation-iteration-count: infinite;
+  }
+
+
+  @keyframes colorSwitch {
+    0% {
+      background-color: #FFF;
+    }
+    50% {
+      background-color: $unread
+    }
+    100% {
+      background-color: #FFF;
+    }
+  }

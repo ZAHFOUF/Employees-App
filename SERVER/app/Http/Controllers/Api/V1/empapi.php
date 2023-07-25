@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\empReq;
 use App\Models\employees;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Support\Facades\Storage;
 
 class empapi extends Controller
@@ -96,8 +95,6 @@ public function download(){
 }
 
 public function render(){
-
-
 
     $path = 'C:\Users\l\Downloads\test ZAHFOUF.pdf';
     $headers = ['Content-Type'=> 'application/pdf'];

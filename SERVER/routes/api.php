@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\V1\empapi;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,13 +15,24 @@ use App\Http\Controllers\Api\V1\empapi;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// the same attr
+
 Route::group(['prefix'=>"v1"],function () {
-    Route::apiResource("/employees",empapi::class);
-    Route::get("/all",[empapi::class,"all"]);
+
+    // api Resource
+    Route::apiResource("/products",ProductsController::class);
+
+
+    Route::post("/upload",[ProductsController::class,"uploadFile"]);
+
+    Route::get("/template",[ProductsController::class,"downloadFile"]);
 });
+
+
+
 
 
